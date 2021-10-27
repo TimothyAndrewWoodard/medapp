@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Census Data</h1>
+<p>
+    <form id = "myForm" action = "/process-form.php" method = "get" target = "_blank">
+    <!-- The "get" value for method shows information user enetered in name value pairs in the query string 
+    in the url. "get" is limited to only 3,000 characters. "get" shouldn't be used for secure data
+    The "Post" value for method doesn't expose the user information in the url (it doesn't have a query string) 
+    and it doesn't have a limit for how much data can be transmitted. It can be used for secure data or larger amounts of data. 
+    target attribute of form specifies where response from submitting the form will display
+    _blank open it in new window. _self opens it same fram (is default). _top displays it in full
+    body of window
+    -->
+        <input placeholder="enter your first name" aria-label="Enter your first name" required/>
+        <input placeholder="enter your last name" aria-label="Enter your last name" required/>
+        <br>
+        <label for = "age">What is your age?</label>
+        <input name = "age" type = "number" min="18" max = "99" value = "21"/>
+        <input placeholder = "enter your password" type = "password" minlength = "7" required/>
+        <p>What is your gender?</p>
+        <input type = "radio" id = "male" name = "gender" value = "male"/>
+        <label for = "male">Male</label><br>
+        <input type = "radio" id = "female" name = "gender" value = "female"/>
+        <label for = "female">Female</label><br>
+        <input type = "radio" id = "nonbinary" name = "gender" value = "nonbinary"/>
+        <label for = "nonbinary">Nonbinary</label><br>
+        <p>What is your race? You may report more than one ethnicity.</p>
+        <input type = "checkbox" name = "caucasion" id = "caucasion" value = "caucasion"/>
+        <label for = "caucasion">Caucasion</label><br>
+        <input type = "checkbox" name = "hispanic" id = "hispanic" value = "hispanic"/>
+        <label for = "hispanic">hispanic</label><br>
+        <input type = "checkbox" name = "asian" id = "asian" value = "asian"/>
+        <label for = "asian">asian</label><br>
+        <input type = "checkbox" name = "Native American" id = "Native American" value = "Native American">
+        <label for = "Native American">Native American</label><br>
+
+        <br>
+        <input id = "submit" type = "submit" value = "submit"/>
+
+    </form>
+</p>
+<script src = "form.js"></script>
+</body>
+</html>
+
+
+

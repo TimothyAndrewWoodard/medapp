@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Image Mapping Demonstration</h1>
+    <h2>Clickable circle, rectangle, and Polygon</h2>
+    <img src="images/imageMapping.png" usemap="#shapeExplainer" alt="shapes" />
+    <map name="shapeExplainer">
+      <area
+        shape="rect"
+        coords="277, 60, 404, 60, 277, 245, 404, 245"
+        alt="rectangle"
+        href="https://en.wikipedia.org/wiki/Rectangle"
+        target="_blank"
+      />
+      <area
+        shape="circle"
+        coords="98,80,52"
+        alt="circle"
+        href="https://en.wikipedia.org/wiki/Circle"
+        target="_blank"
+      />
+      <area
+        shape="poly"
+        coords="138, 185, 200, 185, 231, 237, 202, 290, 138, 290, 107, 237"
+        alt="Polygon"
+        href="https://en.wikipedia.org/wiki/Polygon"
+        target="_blank"
+      />
+    </map>
+    <p></p>
+  </body>
+</html>

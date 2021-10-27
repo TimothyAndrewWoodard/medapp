@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*grouping allows you to save space and typing by applying properties to
+    multiple selectors at once by just separating them with commas and spaces*/
+      .class,
+      .anotherClass,
+      .yetAnotherClass {
+        color: red;
+        font-size: 30px;
+        border: 3px solid;
+      }
+      /*Nesting reduces the number of ids ad classes you must use in your html by nesting 
+      selectors inside of other selectors*/
+      #nesting {
+        background-color: tan;
+        padding: 10px;
+      }
+      #nesting h1 {
+        color: orange;
+        font-size: 30px;
+      }
+
+      #nesting p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>grouping</h1>
+    <h1>Grouping</h1>
+    <p class="class">This is some text</p>
+    <p class="anotherClass">This is some text</p>
+    <p class="yetAnotherClass">This is some text</p>
+    <br />
+    <br />
+    <div id="nesting">
+      <h1>Nesting example</h1>
+      <p>This is an example of nesting</p>
+    </div>
+  </body>
+</html>

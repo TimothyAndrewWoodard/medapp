@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    /*pseudo classes define a special state of html elements to style those
+    elements in a certain way under certain crimustances. Commonly used in
+    conjunction with anchor tag to change the color of a link if a user hovers
+    over the link or has visited */
+    <style>
+      /*Keywords for are anchor elements are link, visited, hover,active. hover must come after 
+    link and visited, acive must come after hover*/
+
+      a:link:link {
+        color: dodgerblue;
+      }
+
+      a:visited:visited {
+        color: red;
+      }
+
+      a:hover:hover {
+        color: green;
+      }
+      a:active:active {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Class demonstration</h1>
+
+    <a
+      class="link, visited, hover, active"
+      href="https://en.wikipedia.org/wiki/HTML_element"
+      target="_blank"
+    >
+      This is a link</a
+    >
+  </body>
+</html>
