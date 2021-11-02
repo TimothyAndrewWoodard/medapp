@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <style>
+      .body {
+        height: 100vh;
+        width: 100vw;
+      }
+      .d1 {
+        background: LightSkyBlue;
+        grid-area: demographics;
+      }
+      .d2 {
+        background: LightSalmon;
+        grid-area: cnote;
+      }
+      .d3 {
+        background: PaleTurquoise;
+        grid-area: history;
+      }
+      .d4 {
+        background: LightPink;
+        grid-area: prescription;
+      }
+      .d5 {
+        background: PaleGreen;
+        grid-area: l4notes;
+      }
+
+      .container {
+        font-size: 40px;
+        width: 100vw;
+        height: 100vh;
+        background: LightGray;
+        display: grid;
+
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 20% 30% 50%;
+        grid-template-areas:
+          'demographics cnote'
+          'history cnote '
+          'l4notes prescription';
+      }
+      .flex-container {
+        flex-direction: column;
+        align-content: stretch;
+      }
+      .flex-container > div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+      }
+      .past-note {
+        font: 10px;
+        border-style: solid;
+        border-width: 2px;
+      }
+    </style>
+  </header>
+  <body>
+    <div class="container">
+      <div class="d1">demographics</div>
+      <div class="d2">current notes</div>
+      <div class="d3">history</div>
+      <div class="d4">prescription</div>
+      <div class="d5 flex-container">
+        Previous Notes
+        <div class="past-note" id="note1">note from (date of last app)</div>
+        <div class="past-note" id="note2">note from (date of last app)</div>
+        <div class="past-note" id="note3">note from (date of last app)</div>
+        <div class="past-note" id="note4">note from (date of last app)</div>
+      </div>
+    </div>
+  </body>
+</html>
