@@ -37,18 +37,27 @@
         grid-template-columns: 40% 60%;
         grid-template-rows: 20% 30% 50%;
         grid-template-areas:
-          'demographics cnote'
-          'history cnote '
-          'l4notes prescription';
+          "demographics cnote"
+          "history cnote "
+          "l4notes prescription";
       }
       .flex-container {
-        flex-direction: column;
-        align-content: stretch;
+        flex-direction: row;
+        height: 100%;
       }
-      .flex-container > div {
+      /* .flex-container > div {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: auto;
+      }*/
+      .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: calc(100% - 46px);
+      }
+      .content-1 {
+        flex: 4;
       }
       .past-note {
         font: 10px;
@@ -65,10 +74,20 @@
       <div class="d4">prescription</div>
       <div class="d5 flex-container">
         Previous Notes
-        <div class="past-note" id="note1">note from (date of last app)</div>
-        <div class="past-note" id="note2">note from (date of last app)</div>
-        <div class="past-note" id="note3">note from (date of last app)</div>
-        <div class="past-note" id="note4">note from (date of last app)</div>
+        <div class="content">
+          <div class="past-note content-1" id="note1">
+            note from (date of last app)
+          </div>
+          <div class="past-note content-1" id="note2">
+            note from (date of last app)
+          </div>
+          <div class="past-note content-1" id="note3">
+            note from (date of last app)
+          </div>
+          <div class="past-note content-1" id="note4">
+            note from (date of last app)
+          </div>
+        </div>
       </div>
     </div>
   </body>
