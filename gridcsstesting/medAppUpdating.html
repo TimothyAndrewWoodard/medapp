@@ -21,7 +21,7 @@
       }
       .d3 {
         background: PaleTurquoise;
-        grid-area: history;
+        grid-area: problem-list;
       }
       .d4 {
         background: LightPink;
@@ -43,11 +43,11 @@
         grid-template-rows: 20% 20% 60%;
         grid-template-areas:
           'demographics cnote'
-          'history cnote '
+          'problem-list cnote '
           'l4notes prescriptions';
       }
       .sub-grid {
-        display: inline-grid;
+        display: grid;
         grid-template-columns: repeat(auto-fill, 1em);
       }
       .flex-container {
@@ -78,45 +78,73 @@
         flex: 4;
       }
       .past-note {
-        font: 10px;
+        font: 0.5em;
+        border-style: solid;
+        border-width: 2px;
+        display: block;
+      }
+      .prescription {
+        font: 0.5em;
+        border-style: solid;
+        border-width: 2px;
+        display: block;
+      }
+      .current-note-sub {
+        font: 0.5em;
         border-style: solid;
         border-width: 2px;
       }
-      .prescription {
-        font: 10px;
+      .problem {
+        font: 0.5em;
         border-style: solid;
         border-width: 2px;
+        display: block;
       }
     </style>
   </header>
   <body>
     <div class="container">
       <div class="d1" contenteditable="true">demographics</div>
-      <div class="d2" contenteditable="true">current notes</div>
-      <div class="d3" contenteditable="true">history</div>
-      <div class="d4 flex-container" contenteditable="true">
-        prescription
+      <div class="d2 flex-container" contenteditable="true">
+        current note
         <div class="content">
-          <div class="prescription content-1" id="prescription1">
-            prescription1
+          <div class="current-note-sub content-1" id="subjective">
+            Subjective:
           </div>
-          <div class="prescription content-1" id="prescription2">
-            prescription2
+          <div class="current-note-sub content-1" id="objective">
+            Objective:
           </div>
-          <div class="prescription content-1" id="prescription3">
-            prescription3
+          <div class="current-note-sub content-1" id="assessment">
+            Assessment:
           </div>
-          <div class="prescription content-1" id="prescription4">
-            prescription3
-          </div>
+          <div class="current-note-sub content-1" id="plan">Plan</div>
         </div>
+      </div>
+      <div class="d3" contenteditable="true">
+        Problem-list
+        <div class="content">
+          <div class="problem">Problem:</div>
+          <div class="problem">Problem:</div>
+          <div class="problem">Problem:</div>
+          <div class="problem">PRoblem:</div>
+        </div>
+      </div>
+      <div class="d4 flex-container" contenteditable="true">
+        Prescriptions
+        <button onclick="AddPre ()">+ New Prescription</button>
+        <br /><br />
+        <div class="prescription" id="container1"></div>
       </div>
       <div class="d5 flex-container">
         Previous Notes
-        <div class="sub-grid"></div>
-          </div>
+        <div class="content">
+          <div class="past-note" id="past-note1">Date: Complaint:</div>
+          <div class="past-note" id="past-note2">Date: Complaint:</div>
+          <div class="past-note" id="past-note3">Date: Complaint:</div>
+          <div class="past-note" id="past-note4">Date: Complaint:</div>
         </div>
       </div>
     </div>
+    <script src="medAppUpdating.js"></script>
   </body>
 </html>

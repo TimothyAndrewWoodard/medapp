@@ -47,7 +47,7 @@
           'l4notes prescriptions';
       }
       .sub-grid {
-        display: inline-grid;
+        display: grid;
         grid-template-columns: repeat(auto-fill, 1em);
       }
       .flex-container {
@@ -81,11 +81,13 @@
         font: 10px;
         border-style: solid;
         border-width: 2px;
+        display: inline-flex;
       }
       .prescription {
         font: 10px;
         border-style: solid;
         border-width: 2px;
+        display: inline-block;
       }
     </style>
   </header>
@@ -97,24 +99,19 @@
       <div class="d4 flex-container" contenteditable="true">
         prescription
         <div class="content">
-          <div class="prescription content-1" id="prescription1">
-            prescription1
-          </div>
-          <div class="prescription content-1" id="prescription2">
-            prescription2
-          </div>
-          <div class="prescription content-1" id="prescription3">
-            prescription3
-          </div>
-          <div class="prescription content-1" id="prescription4">
-            prescription3
-          </div>
+          <div class="prescription" id="prescription1">prescription1</div>
+          <div class="prescription" id="prescription2">prescription2</div>
+          <div class="prescription" id="prescription3">prescription3</div>
+          <div class="prescription" id="prescription4">prescription3</div>
         </div>
       </div>
       <div class="d5 flex-container">
         Previous Notes
-        <div class="sub-grid"></div>
-          </div>
+        <div class="content">
+          <div class="past-note" id="past-note1">Date: Complaint:</div>
+          <div class="past-note" id="past-note2">Date: Complaint:</div>
+          <div class="past-note" id="past-note3">Date: Complaint:</div>
+          <div class="past-note" id="past-note4">Date: Complaint:</div>
         </div>
       </div>
     </div>
